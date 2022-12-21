@@ -32,4 +32,10 @@ jobs:
       - name: Run a one-line script
         run: npm run app
 
+      - uses: actions/checkout@v3
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag node:latest
+     
+
+
      
